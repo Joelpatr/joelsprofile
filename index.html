@@ -39,6 +39,16 @@
 
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--====== CodeMirror CSS ======-->
+    <link rel="stylesheet" href="CodeMirror/lib/codemirror.css" />
+    <link rel="stylesheet" href="CodeMirror/theme/darcula.css" />
+
+    <!--====== CodeMirror js ======-->
+    <script src="CodeMirror/lib/codemirror.js"></script>
+
+    <!--====== CodeMirror modes js ======-->
+    <script src="CodeMirror/mode/javascript/javascript.js"></script>
   </head>
 
   <body>
@@ -105,7 +115,7 @@
                       <a class="page-scroll" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                      <a class="page-scroll" href="#journals">Projects</a>
+                      <a class="page-scroll" href="#journals">QuickDocs</a>
                     </li>
                     <li class="nav-item">
                       <a class="page-scroll" href="#screenshots">More</a>
@@ -153,7 +163,7 @@
                   data-wow-duration="1.3s"
                   data-wow-delay="0.6s"
                 >
-                  I have a passion in making interactive scalable systems.
+                  I have a passion in making interactive and scalable systems.
                   Besides developing software, I love experimenting with music,
                   going for good workouts and spending quality time with my pet
                   dog!
@@ -223,7 +233,7 @@
 
     <!--====== SERVICES PART START ======-->
 
-    <section id="projects" class="services-area pt-110 pb-120">
+    <section id="QuickDocs" class="services-area pt-110 pb-120">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-7">
@@ -231,7 +241,9 @@
               <h3 class="title">My Key Skills</h3>
               <p class="text">
                 I'm always open to learning new tools in the ever-evolving tech
-                scene But in a nutshell, this is what I do!
+                scene But in a nutshell, this is what I do! For greater detail
+                on my profession, skillset and QuickDocs, check out my
+                <a href="https://www.linkedin.com/in/joelpnly/">LinkedIn</a>!
               </p>
             </div>
             <!-- section title -->
@@ -272,7 +284,7 @@
                 </h4>
                 <p class="text">
                   I love developing intelligent functionalities that contribute
-                  to real world problem solving.
+                  to solving real world problems.
                 </p>
               </div>
             </div>
@@ -304,13 +316,13 @@
               <div class="services-content">
                 <h4 class="services-title">
                   <a
-                    href="https://www.nngroup.com/articles/principles-visual-design/"
+                    href="https://www.interaction-design.org/literature/topics/responsive-design"
                     >Responsive styling</a
                   >
                 </h4>
                 <p class="text">
-                  I believe in making one layout design that works on different
-                  devices, than one layout for each.
+                  I believe in focusing on just one adaptive layout design that
+                  works on different devices.
                 </p>
               </div>
             </div>
@@ -347,8 +359,8 @@
                   >
                 </h4>
                 <p class="text">
-                  I have experience with Agile, delivering excellence
-                  sustainably with proper version control.
+                  I understand Agile, delivering sustained excellence with
+                  proper version control.
                 </p>
               </div>
             </div>
@@ -385,8 +397,8 @@
                   >
                 </h4>
                 <p class="text">
-                  I seek to understand the user and aim to bridge the worlds of
-                  aesthetics and utility.
+                  I seek to empathise with the user so as to bridge the worlds
+                  of aesthetics and utility.
                 </p>
               </div>
             </div>
@@ -414,7 +426,6 @@
               <div class="">
                 <img src="assets/images/shape-b.svg" alt="shape" />
               </div>
-              <!-- img class="app" src="assets/images/about-app2.png" alt="app"-->
             </div>
             <!-- about image -->
           </div>
@@ -425,11 +436,11 @@
               data-wow-delay="0.5s"
             >
               <div class="section-title">
-                <h3 class="title">My Projects</h3>
+                <h3 class="title">QuickDocs</h3>
                 <p class="text">
-                  Here are some notable projects I have done. However, due to
-                  possible breaches in confidentiality they may not be as
-                  detailed.
+                  Here are some notable Bugs/Issues/Errors I have faced. I
+                  believe that properly documenting learning points can help
+                  myself as well as others when facing common difficulty!
                 </p>
               </div>
               <!-- section title -->
@@ -443,11 +454,44 @@
               data-wow-duration="1.3s"
               data-wow-delay="0.5s"
             >
-              <div class="">
-                <img src="assets/images/shape-b.svg" alt="shape" />
+              <div>
+                <textarea id="editor" style="width: 50em">
+console.log("This may or may not be used for the problem may not always be representable with code snippets")
+
+//credits to CodeMirror for the displayed text editor</textarea
+                >
+
+                <script>
+                  var editor = CodeMirror.fromTextArea(
+                    document.getElementById("editor"),
+                    {
+                      mode: "javascript",
+                      theme: "darcula",
+                      lineNumbers: true,
+                      lineWrapping: true,
+                      foldGutter: true,
+                    }
+                  );
+                </script>
+                <br />
+                <textarea id="editor2" style="width: 50em">
+console.log("This may or may not be used for the solution may not always be representable with code snippets")</textarea
+                >
+                <script>
+                  var editor = CodeMirror.fromTextArea(
+                    document.getElementById("editor2"),
+                    {
+                      mode: "javascript",
+                      theme: "darcula",
+                      lineNumbers: true,
+                      lineWrapping: true,
+                      foldGutter: true,
+                    }
+                  );
+                </script>
               </div>
-              <!-- img class="app" src="assets/images/about-app2.png" alt="app"-->
             </div>
+
             <!-- about image -->
           </div>
           <div class="col-lg-6">
@@ -457,15 +501,17 @@
               data-wow-delay="0.5s"
             >
               <div class="section-title">
-                <h3 class="title">Placeholder Project 1 - 2021</h3>
+                <h3 class="title">Placeholder Bug A</h3>
                 <p class="text">
-                  <b>Duration :</b> 7 months <br />
                   <b>Tools/ Frameworks :</b> Angular, Typescript, Azure DevOps
                   <br />
                   <b>Level :</b> Hello World<br />
                   <b>Description :</b> Lorem ipsum dolor sit amet, consectetur
                   adipisicing elit. Accusantium, doloribus unde perferendis
                   maxime alias cum quasi repudiandae facilis qui, Mollitia.<br />
+                  <b>Solution :</b> StackOverFlow guy said Lorem, ipsum... The
+                  Left hand side placeholder svg will be replaced with code
+                  markup for the solution and problem.<br />
                 </p>
               </div>
               <!-- section title -->
@@ -607,7 +653,7 @@
                   </div>
                   <ul class="link">
                     <li><a class="" href="index.html">Home</a></li>
-                    <li><a class="" href="#journals">Projects</a></li>
+                    <li><a class="" href="#journals">QuickDocs</a></li>
                   </ul>
                 </div>
                 <!-- footer link wrapper -->
