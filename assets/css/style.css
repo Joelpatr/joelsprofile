@@ -38,7 +38,7 @@ a:hover {
 i,
 span,
 a {
-  display: inline-block;
+  display: relative;
 }
 
 audio,
@@ -1170,22 +1170,37 @@ p {
      02A. CodeBlock css 
 ===========================*/
 
-pre {
-  background-color: #222;
-  padding: 0.1em 0.5em 0.3em 0.7em;
-  border-left: 11px solid #0898e7;
-  margin: 1.7em 0 1.7em 0.3em;
-  display: block;
-  width: 93%;
-  font-size: 20px;
-  text-align: left;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #f3fdff;
+.terminal {
   position: relative;
-  white-space: pre-wrap;
-  overflow: auto;
-  counter-increment: listing;
-  content: counter(listing) ". ";
+  width: 80%;
+  max-width: 600px;
+  border-radius: 6px;
+  padding-top: 45px;
+  margin-top: 8px;
+  overflow: hidden;
+  background-color: rgb(15, 15, 16);
+}
+
+.terminal::before {
+  content: "\2022 \2022 \2022";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: rgb(58, 58, 58);
+  color: #c2c3c4;
+  width: 100%;
+  font-size: 2rem;
+  line-height: 0;
+  padding: 14px 0;
+  text-indent: 4px;
+}
+
+.terminal pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  color: white;
+  padding: 0 1rem 1rem;
+  margin: 0;
 }
 /*===========================
       03.SERVICES css 

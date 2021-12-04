@@ -39,16 +39,6 @@
 
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="assets/css/style.css" />
-
-    <!--====== CodeMirror CSS ======-->
-    <link rel="stylesheet" href="CodeMirror/lib/codemirror.css" />
-    <link rel="stylesheet" href="CodeMirror/theme/darcula.css" />
-
-    <!--====== CodeMirror js ======-->
-    <script src="CodeMirror/lib/codemirror.js"></script>
-
-    <!--====== CodeMirror modes js ======-->
-    <script src="CodeMirror/mode/javascript/javascript.js"></script>
   </head>
 
   <body>
@@ -189,6 +179,7 @@
                         animation-duration: 1.3s;
                         animation-delay: 1.2s;
                         animation-name: fadeInLeftBig;
+                        display: inline-block;
                       "
                       ><i class="lni lni-play"></i
                     ></a>
@@ -438,9 +429,9 @@
               <div class="section-title">
                 <h3 class="title">QuickDocs</h3>
                 <p class="text">
-                  Here are some notable Bugs/Issues/Errors I have faced. I
-                  believe that properly documenting learning points can help
-                  myself as well as others when facing common difficulty!
+                  Here are some documentation on Concepts/Bugs/Issues/Errors. I
+                  believe that properly documenting learning points can go a
+                  long way in our journey as developers!
                 </p>
               </div>
               <!-- section title -->
@@ -450,46 +441,33 @@
           </div>
           <div class="col-lg-6">
             <div
-              class="about-image mt-50 wow fadeInLeftBig"
+              class="mt-50 wow fadeInLeftBig"
               data-wow-duration="1.3s"
               data-wow-delay="0.5s"
             >
-              <div>
-                <textarea id="editor" style="width: 50em">
-console.log("This may or may not be used for the problem may not always be representable with code snippets")
+              <a href="templates/devops.html">
+                <div class="terminal">
+                  <pre>Azure DevOps and Git</pre>
+                </div></a
+              >
 
-//credits to CodeMirror for the displayed text editor</textarea
-                >
+              <a href="templates/softwaredesign.html">
+                <div class="terminal">
+                  <pre>Software design patterns (MVC, MVVM, ...)</pre>
+                </div></a
+              >
 
-                <script>
-                  var editor = CodeMirror.fromTextArea(
-                    document.getElementById("editor"),
-                    {
-                      mode: "javascript",
-                      theme: "darcula",
-                      lineNumbers: true,
-                      lineWrapping: true,
-                      foldGutter: true,
-                    }
-                  );
-                </script>
-                <br />
-                <textarea id="editor2" style="width: 50em">
-console.log("This may or may not be used for the solution may not always be representable with code snippets")</textarea
-                >
-                <script>
-                  var editor = CodeMirror.fromTextArea(
-                    document.getElementById("editor2"),
-                    {
-                      mode: "javascript",
-                      theme: "darcula",
-                      lineNumbers: true,
-                      lineWrapping: true,
-                      foldGutter: true,
-                    }
-                  );
-                </script>
-              </div>
+              <a href="templates/dotnet.html">
+                <div class="terminal">
+                  <pre>.NET and C#</pre>
+                </div></a
+              >
+
+              <a href="templates/othertools.html">
+                <div class="terminal">
+                  <pre>Third party softwares (Figma, ...)</pre>
+                </div></a
+              >
             </div>
 
             <!-- about image -->
@@ -500,23 +478,30 @@ console.log("This may or may not be used for the solution may not always be repr
               data-wow-duration="1.3s"
               data-wow-delay="0.5s"
             >
-              <div class="section-title">
-                <h3 class="title">Placeholder Bug A</h3>
-                <p class="text">
-                  <b>Tools/ Frameworks :</b> Angular, Typescript, Azure DevOps
-                  <br />
-                  <b>Level :</b> Hello World<br />
-                  <b>Description :</b> Lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit. Accusantium, doloribus unde perferendis
-                  maxime alias cum quasi repudiandae facilis qui, Mollitia.<br />
-                  <b>Solution :</b> StackOverFlow guy said Lorem, ipsum... The
-                  Left hand side placeholder svg will be replaced with code
-                  markup for the solution and problem.<br />
-                </p>
-              </div>
-              <!-- section title -->
-            </div>
+              <a href="templates/angular.html">
+                <div class="terminal">
+                  <pre>Everything Angular</pre>
+                </div></a
+              >
 
+              <a href="templates/react.html">
+                <div class="terminal">
+                  <pre>Everything React</pre>
+                </div></a
+              >
+
+              <a href="templates/b5scss.html">
+                <div class="terminal">
+                  <pre>SCSS and Bootstrap</pre>
+                </div></a
+              >
+
+              <a href="templates/htmlcssjs.html">
+                <div class="terminal">
+                  <pre>HTML, CSS and Javascript</pre>
+                </div></a
+              >
+            </div>
             <!-- about content -->
           </div>
         </div>
